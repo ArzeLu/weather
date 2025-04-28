@@ -33,7 +33,7 @@ classes = [i for i in range(-22, 40, 6)]
 y_test = np.digitize(y_test, classes)
 y_train = np.digitize(y_train, classes)
 
-bin_midpoints = [(classes[i] + classes[i+1])/2 for i in range(len(classes)-1)]
+class_midpoints = [(classes[i] + classes[i+1])/2 for i in range(len(classes)-1)]
 
 #loop over the hyperparameter values (k, p, and w) ok KNN
 #--> add your Python code here
@@ -65,8 +65,8 @@ for k in k_values:
                 y_pred = clf.predict([x_test_sample])[0]
 
                 # Convert prediction bin index back to original value
-                y_pred = bin_midpoints[y_pred - 1]
-                real_value = bin_midpoints[y_test_sample - 1]
+                y_pred = class_midpoints[y_pred - 1]
+                real_value = class_midpoints[y_test_sample - 1]
 
                 # Check if prediction is within ±15% of the true value
                 percent_diff = 100 * abs(y_pred - real_value) / abs(real_value)
