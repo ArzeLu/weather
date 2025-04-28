@@ -1,7 +1,7 @@
 #-------------------------------------------------------------------------
 # AUTHOR: Arze Lu
 # FILENAME: knn.py
-# SPECIFICATION: Classify test instances using KNN with grid search
+# SPECIFICATION: supervised weather training
 # FOR: CS 5990 - Assignment #4
 # TIME SPENT: 5 hours
 #-------------------------------------------------------------------------
